@@ -1,1 +1,1 @@
-Procédure pour déployer un pod kubernetes contenant Kubernetes Dashboard
+Procédure pour déployer un pod kubernetes contenant Apache
