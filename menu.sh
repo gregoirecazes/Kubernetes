@@ -19,8 +19,7 @@ mkdir /test_git/projet/bash/stop
 
 cp client_install_choix_svc.sh /test_git/projet/bash/install
 cp install_svc.sh /test_git/projet/bash/install
-cp 
-local_install_choix_svc.sh /test_git/projet/bash/install
+cp local_install_choix_svc.sh /test_git/projet/bash/install
 }
 
 
