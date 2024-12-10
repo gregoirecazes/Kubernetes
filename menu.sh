@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dossier(){
-mkdir test_git/projet/
+mkdir /test_git/projet/
 }
 dossier
 
