@@ -17,9 +17,10 @@ mkdir /test_git/projet/bash/restart
 mkdir /test_git/projet/bash/start
 mkdir /test_git/projet/bash/stop
 
-cp Kubernetes/client_install_choix_svc.sh /test_git/projet/bash/install
-cp Kubernetes/install_svc.sh /test_git/projet/bash/install
-cp Kubernetes/local_install_choix_svc.sh /test_git/projet/bash/install
+cp client_install_choix_svc.sh /test_git/projet/bash/install
+cp install_svc.sh /test_git/projet/bash/install
+cp 
+local_install_choix_svc.sh /test_git/projet/bash/install
 }
 
 
