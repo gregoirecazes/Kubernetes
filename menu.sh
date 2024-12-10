@@ -19,8 +19,6 @@ cp install_svc.sh /test_git/projet/bash/install
 cp local_install_choix_svc.sh /test_git/projet/bash/install
 }
 
-trie
-
 ROUGE='\033[0;31m'
 BLANC='\033[0m'
 
