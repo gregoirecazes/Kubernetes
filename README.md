@@ -1,1 +1,1 @@
-Procédure pour déployer des services avec un menu
+Procédure pour gérer des services avec un menu
