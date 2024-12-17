@@ -15,7 +15,7 @@ mkdir /test_git/projet/bash/start
 mkdir /test_git/projet/bash/stop
 
 cp menu.sh /test_git/projet/bash
-cp client_install_choix_git/proc.sh /test_git/projet/bash/install
+cp client_install_choix.sh /test_git/projet/bash/install
 cp install_svc.sh /test_git/projet/bash/install
 cp local_install_choix_svc.sh /test_git/projet/bash/install
 cp list_svc.sh /test_git/projet/bash/list
