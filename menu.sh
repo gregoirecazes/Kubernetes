@@ -22,7 +22,7 @@ cp list_svc.sh /test_git/projet/bash/list
 
 cd ..
 rm -r Kubernetes
-cd projet
+cd /test_git/projet
 }
 
 ROUGE='\033[0;31m'
