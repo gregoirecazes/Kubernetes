@@ -19,6 +19,10 @@ cp client_install_choix_svc.sh /test_git/projet/bash/install
 cp install_svc.sh /test_git/projet/bash/install
 cp local_install_choix_svc.sh /test_git/projet/bash/install
 cp list_svc.sh /test_git/projet/bash/list
+
+cd ..
+rm -r Kubernetes
+cd projet
 }
 
 ROUGE='\033[0;31m'
