@@ -9,15 +9,15 @@ kubectl get svc -n webservers -o custom-columns=PORT:.spec.ports[*].nodePort --n
 install_dashboard(){
 git -c http.sslVerify=false clone https://github.com/gregoirecazes/Kubernetes.git
 kubectl delete namespace kubernetes-dashboard
-kubectl apply -f /projet/kubernetes/pods/Kubernetes/dashboard.yaml
-kubectl apply -f /projet/kubernetes/pods/Kubernetes/admin-user.yaml
+kubectl apply -f /test_git/projet/kubernetes/pods/Kubernetes/dashboard.yaml
+kubectl apply -f /test_git/projet/kubernetes/pods/Kubernetes/admin-user.yaml
 sleep 10
 kubectl -n kubernetes-dashboard create token admin-user > /tmp/token.txt
 kubectl port-forward -n kubernetes-dashboard service/kubernetes-dashboard 8443:443 &
 }
 
 install_apache(){
-kubectl run apache --image=nginx --restart=Never --port=80 -n webservers
+kubectl run apache --image=httpd --restart=Never --port=80 -n webservers
 sleep 2
 kubectl expose pod apache --type=NodePort --port=80 --name=apache-service -n webservers
 echo -e "Le port du pod est : ${afficher_port}"
@@ -46,19 +46,19 @@ case $choix in
 
     1)
         # Installation de Docker
-        ansible-playbook /projet/ansible/local/local_docker.yml
+        ansible-playbook /test_git/projet/ansible/local/local_docker.yml
         ;;
     2)
         # Installation de Kubernetes
-        ansible-playbook /projet/ansible/local/local_kubernetes.yml
+        ansible-playbook /test_git/projet/ansible/local/local_kubernetes.yml
         ;;
     3)
         # Installation du SSH
-        ansible-playbook /projet/ansible/local/local_ssh.yml
+        ansible-playbook /test_git/projet/ansible/local/local_ssh.yml
         ;;
     4)
         # Installation de Ansible
-        ansible-playbook /projet/ansible/local/local_ansible.yml
+        ansible-playbook /test_git/projet/ansible/local/local_ansible.yml
         ;;
     5)
         # Déploiement du pod Apache
