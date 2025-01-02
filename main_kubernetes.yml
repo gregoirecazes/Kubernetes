@@ -1,0 +1,36 @@
+---
+# tasks file for kubernetes
+
+- name: Installer le package ca-certificates pour les certificats SSL
+  apt:
+    name: ca-certificates
+    state: present
+    update_cache: yes
+
+- name: Mettre à jour les certificats CA
+  command: update-ca-certificates
+
+- name: Mise a jour
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Telechargement de Kubectl
+  get_url:
+    url: "https://dl.k8s.io/release/v1.28.0/bin/linux/amd64/kubectl"
+    dest: "/usr/local/bin/kubectl"
+    validate_certs: no
+
+- name: Rendre kubectl executable
+  file:
+    path: "/usr/local/bin/kubectl"
+    mode: '0755'
+
+- name: Check if kubectl exists
+  stat:
+    path: /path/to/kubectl
+  register: kubectl_path
+
+- name: Move kubectl to /usr/local/bin
+  command: mv /path/to/kubectl /usr/local/bin/kubectl
+  when: kubectl_path.stat.exists

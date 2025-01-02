@@ -1,0 +1,23 @@
+---
+# tasks file for services
+
+- name: Installer le package ca-certificates pour les certificats SSL
+  apt:
+    name: ca-certificates
+    state: present
+    update_cache: yes
+
+- name: Mettre a jour les certificats CA
+  command: update-ca-certificates
+
+- name: Mise a jour
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Installation Ansible
+  apt:
+    name: ansible
+    name: software-properties-common
+    state: present
+    update_cache: yes

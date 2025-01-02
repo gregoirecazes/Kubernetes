@@ -1,0 +1,18 @@
+---
+# tasks file for roles/docker
+
+- name: Mise a jour des paquets
+  apt:
+    update_cache: yes
+
+- name: Mise a jour tous les paquets installes
+  apt:
+    upgrade: dist
+
+
+- name: Installation de docker
+  apt:
+    name: docker-*
+    name: docker-compose
+    state: present
+    update_cache: yes

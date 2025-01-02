@@ -1,0 +1,28 @@
+---
+# tasks file for services
+
+- name: Installer le package ca-certificates pour les certificats SSL
+  apt:
+    name: ca-certificates
+    state: present
+    update_cache: yes
+
+- name: Mettre a jour les certificats CA
+  command: update-ca-certificates
+
+- name: Mise a jour des paquets
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Installer le service SSH
+  apt:
+    name: openssh-server
+    state: present
+    update_cache: yes
+
+- name: Activer et demarrer le service SSH
+  systemd:
+    name: ssh
+    enabled: yes
+    state: started

@@ -1,0 +1,27 @@
+---
+# tasks file for roles/apache2
+
+- name: Mise a jour des paquets
+  apt:
+    update_cache: yes
+
+- name: Mise a jour tous les paquets installes
+  apt:
+    upgrade: dist
+
+- name: Telecharger l'image Apache
+  docker_image:
+    name: httpd
+    tag: latest
+    source: pull
+  register: result_apache_image
+
+- name: Demarrer le conteneur Apache
+  docker_container:
+    name: apache_server
+    image: httpd:latest
+    state: started
+    restart_policy: always
+    ports:
+      - "8080:80"
+  register: result_apache_container
