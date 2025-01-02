@@ -20,11 +20,11 @@ case $choix in
 
     1)
         # Lancement vers le script bash local_install_choix_svc.sh
-        bash test_git/projet/bash/install/local_install_choix_svc.sh
+        bash /test_git/projet/bash/install/local_install_choix_svc.sh
         ;;
     2)
         # Lancement vers le script bash client_install_choix_svc.sh
-        bash test_git/projet/bash/install/client_install_choix_svc.sh
+        bash /test_git/projet/bash/install/client_install_choix_svc.sh
         ;;
     3)
         echo "Au revoir !"
