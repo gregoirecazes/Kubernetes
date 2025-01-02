@@ -13,12 +13,19 @@ mkdir /test_git/projet/bash/modify
 mkdir /test_git/projet/bash/restart
 mkdir /test_git/projet/bash/start
 mkdir /test_git/projet/bash/stop
+mkdir /test_git/projet/ansible/local
+mkdir /test_git/projet/ansible/client
+mkdir /test_git/projet/ansible/roles
 
 cp menu.sh /test_git/projet/bash
 cp client_install_choix_svc.sh /test_git/projet/bash/install
 cp install_svc.sh /test_git/projet/bash/install
 cp local_install_choix_svc.sh /test_git/projet/bash/install
 cp list_svc.sh /test_git/projet/bash/list
+cp ansible.cfg /test_git/projet/ansible
+cp inventory /test_git/projet/ansible
+cp services.yml /test_git/projet/ansible
+cp webservers.yml /test_git/projet/ansible
 
 cd ..
 rm -r Kubernetes
