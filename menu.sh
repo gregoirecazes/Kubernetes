@@ -17,15 +17,37 @@ mkdir /test_git/projet/ansible/local
 mkdir /test_git/projet/ansible/client
 mkdir /test_git/projet/ansible/roles
 
+ansible-galaxy init /test_git/projet/ansible/roles/ansible
+ansible-galaxy init /test_git/projet/ansible/roles/apache2
+ansible-galaxy init /test_git/projet/ansible/roles/docker
+ansible-galaxy init /test_git/projet/ansible/roles/kubernetes
+ansible-galaxy init /test_git/projet/ansible/roles/ssh
+
 cp menu.sh /test_git/projet/bash
+
 cp client_install_choix_svc.sh /test_git/projet/bash/install
 cp install_svc.sh /test_git/projet/bash/install
 cp local_install_choix_svc.sh /test_git/projet/bash/install
+
 cp list_svc.sh /test_git/projet/bash/list
+
 cp ansible.cfg /test_git/projet/ansible
 cp inventory /test_git/projet/ansible
 cp services.yml /test_git/projet/ansible
 cp webservers.yml /test_git/projet/ansible
+
+cp client_ansible.yml /test_git/projet/ansible/client
+cp client_apache.yml /test_git/projet/ansible/client
+cp client_docker.yml /test_git/projet/ansible/client
+cp client_kubernetes.yml /test_git/projet/ansible/client
+cp client_ssh.yml /test_git/projet/ansible/client
+
+cp local_ansible.yml /test_git/projet/ansible/local
+cp local_docker.yml /test_git/projet/ansible/local
+cp local_kubernetes.yml /test_git/projet/ansible/local
+cp local_ssh.yml /test_git/projet/ansible/local
+
+
 
 cd ..
 rm -r Kubernetes
