@@ -1,0 +1,4 @@
+#playbook local
+- hosts: client
+  roles:
+    - {role: /projet/ansible/roles/ssh, tags: SSH}

@@ -1,0 +1,4 @@
+#playbook local
+- hosts: client
+  roles:
+    - {role: apache2, tags: Apache}

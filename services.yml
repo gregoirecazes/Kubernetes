@@ -1,0 +1,5 @@
+#playbook local
+- hosts: webservers
+  roles:
+     - {role: services, tags: services}
+

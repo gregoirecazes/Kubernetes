@@ -1,0 +1,9 @@
+[local]
+localhost ansible_connection=local
+
+[webservers]
+localhost ansible_connection=local
+DebianClient02
+
+[client]
+DebianClient02

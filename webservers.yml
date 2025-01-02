@@ -1,0 +1,7 @@
+#playbook local
+- hosts: webservers
+  roles:
+    - {role: apache2, tags: apache2}
+    - {role: docker, tags: docker}
+    - {role: kubernetes, tags: kubernetes}
+
