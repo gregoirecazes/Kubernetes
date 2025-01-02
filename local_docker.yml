@@ -1,0 +1,4 @@
+#playbook local
+- hosts: local
+  roles:
+    - {role: /projet/ansible/roles/docker, tags: Docker}

@@ -1,0 +1,5 @@
+#playbook local
+- hosts: local
+  roles:
+    - {role: /projet/ansible/roles/ansible, tags: Ansible}
+
