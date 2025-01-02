@@ -47,6 +47,9 @@ cp local_docker.yml /test_git/projet/ansible/local
 cp local_kubernetes.yml /test_git/projet/ansible/local
 cp local_ssh.yml /test_git/projet/ansible/local
 
+rm /test_git/projet/ansible/roles/ansible/tasks/main.yml
+cp main_ansible.yml /test_git/projet/ansible/roles/ansible/tasks
+
 
 
 cd ..
